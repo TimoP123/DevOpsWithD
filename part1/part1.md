@@ -46,3 +46,10 @@ helsinki.fi
 </body></html>
 
 ```
+
+## 1.4
+
+Files to build the curler image are [Dockerfile](1.4/Dockerfile) and [script.sh](1.4/script.sh).
+
+Build the image with command `docker build -t curler .`  
+Run the image with command `docker run -it curler`
