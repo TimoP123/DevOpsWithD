@@ -19,3 +19,30 @@ $ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 
 ```
+
+## 1.3
+
+Run a container, install curl, listen to a website address and fetch website:
+
+```
+docker run -d --rm -i --name curler ubuntu:16.04 sh -c 'apt update && apt install -y curl; while true; do read website; sleep 3; curl http://$website; done'
+
+```
+
+If we now attach container and give an address, the curler will fetch the website.
+
+```
+$ docker attach --sig-proxy=false curler
+helsinki.fi
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   231  100   231    0     0    669      0 --:--:-- --:--:-- --:--:--   671
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
+```
