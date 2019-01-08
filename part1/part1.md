@@ -53,3 +53,10 @@ Files to build the curler image are [Dockerfile](1.4/Dockerfile) and [script.sh]
 
 Build the image with command `docker build -t curler .`  
 Run the image with command `docker run -it curler`
+
+Output matches with the previous exercise.
+
+## 1.5
+
+Build image using [Dockerfile](1.5/Dockerfile) and command `docker build -t frontend-example .`
+When the image is run with command `docker run -d -p 5000:5000 frontend-example` the application can be found with browser from address localhost:5000
