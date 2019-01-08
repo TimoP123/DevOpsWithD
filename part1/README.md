@@ -60,3 +60,10 @@ Output matches with the previous exercise.
 
 Build image using [Dockerfile](1.5/Dockerfile) and command `docker build -t frontend-example .`
 When the image is run with command `docker run -d -p 5000:5000 frontend-example` the application can be found with browser from address localhost:5000
+
+## 1.6
+
+Build image using [Dockerfile](1.6/Dockerfile) and command `docker build -t backend-example .`
+Create an empty logfile: `touch logs.txt`
+Run image: `docker run -d -p 8000:8000 -v $(pwd)/logs.txt:/app/logs.txt backend-example`
+Open location localhost:8000 with browser.
