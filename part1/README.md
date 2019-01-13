@@ -78,6 +78,6 @@ Open location localhost:5000 with browser.
 
 ## 1.9
 
-Image can be built from Dockerfile with command `docker build -t golang_dev_env .` or pulled from [Docker Hub](https://hub.docker.com/r/timop/golang_dev_env).
+Image can be built from [Dockerfile](1.9/Dockerfile) with command `docker build -t golang_dev_env .` or pulled from [Docker Hub](https://hub.docker.com/r/timop/golang_dev_env).
 
 Run image with command `docker run -it -p 8000:8000 timop/golang_dev_env`
