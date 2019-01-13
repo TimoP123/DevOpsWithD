@@ -67,3 +67,17 @@ Build image using [Dockerfile](1.6/Dockerfile) and command `docker build -t back
 Create an empty logfile: `touch logs.txt`
 Run image: `docker run -d -p 8000:8000 -v $(pwd)/logs.txt:/app/logs.txt backend-example`
 Open location localhost:8000 with browser.
+
+## 1.7
+
+Build images in backend [Dockerfile](1.7/backend/Dockerfile) and frontend [Dockerfile](1.7/frontend/Dockerfile) folders with commands `docker build -t frontend .` and `docker build -t backend .` respectively.
+Create an empty logfile: `touch logs.txt`  
+Run backend: `docker run -d -p 8000:8000 -v $(pwd)/logs.txt:/app/logs.txt backend`  
+Run frontend: `docker run -d -p 5000:5000 frontend`  
+Open location localhost:5000 with browser.
+
+## 1.9
+
+Image can be built from Dockerfile with command `docker build -t golang_dev_env .` or pulled from [Docker Hub](https://hub.docker.com/r/timop/golang_dev_env).
+
+Run image with command `docker run -it -p 8000:8000 timop/golang_dev_env`
