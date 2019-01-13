@@ -78,6 +78,8 @@ Open location localhost:5000 with browser.
 
 ## 1.9
 
+This image (goland_dev_env) has Golang, Glide dependency manager and Gin (hot reload) installed. In addition it has port 8000 exposed for running backend applications.
+
 Image can be built from [Dockerfile](1.9/Dockerfile) with command `docker build -t golang_dev_env .` or pulled from [Docker Hub](https://hub.docker.com/r/timop/golang_dev_env).
 
 Run image with command `docker run -it -p 8000:8000 timop/golang_dev_env`
